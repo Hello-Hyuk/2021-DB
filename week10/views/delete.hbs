@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<table>
+    <tr>
+        <td>Pname</td>
+        <td>Pnum</td>
+    </tr>
+    {{#each project}}
+        <form method="post">
+            <tr>
+                <td>{{Pname}}</td>
+                <td>{{Pnum}}</td>
+                <td style="border: none; margin-left: 10px;">
+                    <button
+                        style="margin-left: 10px;"
+                        name='delBtn'
+                        type="submit"
+                        value="{{Pnum}}"
+                        formaction="/delete">
+                        삭제
+                    </button>
+                </td>
+            </tr>
+        </form>
+    {{/each}}
+</table>

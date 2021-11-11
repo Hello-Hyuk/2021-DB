@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+<!-- ㅇ
+    department 를 수정하는 page
+    수정할 부분을 input으로 설정하여 formaction을 통해
+    값을 전달 
+-->
+                
+<table>
+    <tr>
+        <td>Dname</td>
+        <td>Dnumber</td>
+        <td>Mgr_ssn</td>
+        <td>Mgr_start_date</td>
+    </tr>
+    {{#each dept_res}}
+        <form method ="post">
+            <tr>
+                
+                <td><input type="text" name = "dname" placeholder = {{Dname}}></td>
+                <td>{{Dnumber}}</td>
+                <td>{{Mgr_ssn}}</td>
+                <td>{{Mgr_start_date}}</td>
+                <td><input type="submit" value="수정" formaction = "/update/department"></td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
+
+
+
+
+
+

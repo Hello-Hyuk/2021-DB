@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+<!-- 
+    employee 를 수정하는 page
+    수정할 부분을 input으로 설정하여 formaction을 통해
+    값을 전달 
+-->
+<table>
+    <tr>
+        <td>Fname</td>
+        <td>Minit</td>
+        <td>Lname</td>
+        <td>Ssn</td>
+        <td>Bdata</td>
+        <td>Address</td>
+        <td>Sex</td>
+        <td>Salary</td>
+        <td>Super_ssn</td>
+        <td>Dno</td>
+    </tr>
+    {{#each emp_res}}
+        <form method="post" action='/update/employee'>
+        <tr>
+            <td>{{Fname}}</td>
+            <td>{{Minit}}</td>
+            <td>{{Lname}}</td>
+            <td>{{Ssn}}</td>
+            <td>{{Bdata}}</td>
+            <td>{{Address}}</td>
+            <td>{{Sex}}</td>
+            <td><input type="text" name = "salary" placeholder = {{Salary}}></td>
+            <td>{{Super_ssn}}</td>
+            <td>{{Dno}}</td>
+            <td><input type="submit" value="수정"></td>
+        </tr>
+    </form>
+    {{/each}}
+</table>
